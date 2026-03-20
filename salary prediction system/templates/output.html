@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Prediction Result</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #4e73df, #1cc88a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .result-box {
+            background: white;
+            padding: 40px;
+            width: 350px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            margin-bottom: 20px;
+        }
+
+        .salary {
+            font-size: 22px;
+            color: green;
+            margin-top: 15px;
+        }
+
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            text-decoration: none;
+            background: #4e73df;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background: #2e59d9;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="result-box">
+    <h2>Salary Prediction Result</h2>
+
+    <div class="salary">
+        ₹ {{ prediction }}
+    </div>
+
+    <a href="/">Predict Again</a>
+</div>
+
+</body>
+</html>

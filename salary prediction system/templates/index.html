@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salary Prediction System</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(120deg, #4e73df, #1cc88a);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4e73df;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #2e59d9;
+        }
+
+        .result {
+            margin-top: 15px;
+            text-align: center;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Salary Prediction system</h2>
+
+    <form id="salaryForm">
+
+        <input type="number" id="age" placeholder="Enter Age" required>
+
+        <select id="gender">
+            <option value="">Select Gender</option>
+            <option>Male</option>
+            <option>Female</option>
+        </select>
+
+        <select id="education">
+            <option value="">Select Education</option>
+            <option>Bachelors</option>
+            <option>Masters</option>
+            <option>PhD</option>
+        </select>
+
+        <input type="text" id="job" placeholder="Enter Job Title" required>
+
+        <input type="number" id="experience" placeholder="Years of Experience" required>
+
+        <button type="submit">Predict Salary</button>
+
+    </form>
+
+    <div class="result" id="result"></div>
+</div>
+
+<script>
+    document.getElementById("salaryForm").addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        let age = document.getElementById("age").value;
+        let exp = document.getElementById("experience").value;
+
+        // Simple demo calculation (frontend demo only)
+        let predictedSalary = (age * 1000) + (exp * 5000);
+
+        document.getElementById("result").innerHTML =
+            "Estimated Salary: ₹ " + predictedSalary;
+    });
+</script>
+
+</body>
+</html>
